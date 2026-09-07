@@ -1,3 +1,9 @@
+"""
+Autonomous AI Vacuum Robot - Vision & Object Detection Pipeline
+Perception system running on Raspberry Pi 4 for real-time obstacle avoidance,
+room feature detection, and cleaning navigation benchmarks.
+"""
+
 import time
 import cv2
 import numpy as np
@@ -8,7 +14,7 @@ from picamera2 import Picamera2
 # ==========================================
 # 1. Capture Image via MIPI CSI-2 (Picamera2)
 # ==========================================
-print("Initializing CSI-2 camera...")
+print("AI Vacuum Robot: Initializing CSI-2 camera...")
 with Picamera2() as picam2:
     # Use standard 640x480 RGB preview configuration
     config = picam2.create_preview_configuration(

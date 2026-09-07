@@ -1,3 +1,9 @@
+"""
+Autonomous AI Vacuum Robot - RPi to ESP32 UART Communication Bridge
+Facilitates bi-directional communication between the high-level perception system
+(Raspberry Pi) and the real-time motor/sensor controller (ESP32).
+"""
+
 import serial
 import time
 
@@ -20,7 +26,7 @@ lost_count = 0
 rtts = []
 
 try:
-    print(f"Connected to: {ser.name} at {BAUDRATE} baud")
+    print(f"AI Vacuum Robot: Connected to ESP32 on {ser.name} at {BAUDRATE} baud")
     ser.reset_input_buffer()
     ser.reset_output_buffer()
 

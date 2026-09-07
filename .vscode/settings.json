@@ -1,6 +1,6 @@
 {
     "idf.pythonInstallPath": "/usr/bin/python3",
-    "cmake.sourceDirectory": "C:/Projects/AI-Lawn-Mower/ai-lawn-mower",
+    "cmake.sourceDirectory": "C:/Projects/AI-Lawn-Mower/ai-vacuum-robot",
     "idf.flashType": "UART",
     "idf.currentSetup": "C:\\esp\\.espressif\\v6.0.2\\esp-idf",
     "idf.portWin": "COM4",

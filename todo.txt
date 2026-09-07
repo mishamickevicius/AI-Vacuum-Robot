@@ -1,6 +1,7 @@
-- IR sensor state machine testing(in lab)
-- Plan out AI Brain
-- Figure out IMU reads
-- Look into Extended Kalman Filter (EKF) to smooth out GPS and IMU data
-- Install RPI OS Lite and set up ssh + wifi
-
+- Cliff & obstacle IR sensor state machine testing (in lab)
+- Plan out Vacuum Robot AI Brain (RPi4 perception + ESP32 control)
+- Figure out IMU reads for indoor odometry
+- Look into Extended Kalman Filter (EKF) to fuse odometry and IMU data
+- Install RPi OS Lite and configure SSH + WiFi + UART
+- Validate suction motor & brush motor PWM controllers
+- Implement CLEANING_MODE coverage algorithm

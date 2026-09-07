@@ -2,12 +2,10 @@
 idf_component_register(
     # Only main.c is compiled by the 'main' component now.
     # gpio_driver.c is handled by the gpio_driver component.
-    SRCS "main.c"
+    SRCS "main.c" "src/robot_orchestrator.c"
 
     # Any include directories for headers *specific to main*.
-    # If main.c includes "gpio_driver.h", it will find it because of the REQUIRES below.
-    # If main.c has its own main.h in the same directory, you can use "."
-    INCLUDE_DIRS "."
+    INCLUDE_DIRS "." "include"
 
     # Declare that the 'main' component requires your 'gpio_driver' component.
     # This ensures gpio_driver is compiled and its public headers are visible to main.

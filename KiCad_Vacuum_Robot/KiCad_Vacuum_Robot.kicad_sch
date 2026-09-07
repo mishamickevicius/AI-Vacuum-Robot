@@ -98,7 +98,7 @@
 			)
 		)
 		(instances
-			(project "KiCad_Lawn_Mower"
+			(project "KiCad_Vacuum_Robot"
 				(path "/0806a8c0-bc45-48da-a5f3-b40d8c386964"
 					(page "2")
 				)
@@ -144,7 +144,7 @@
 			)
 		)
 		(instances
-			(project "KiCad_Lawn_Mower"
+			(project "KiCad_Vacuum_Robot"
 				(path "/0806a8c0-bc45-48da-a5f3-b40d8c386964"
 					(page "4")
 				)
@@ -190,7 +190,7 @@
 			)
 		)
 		(instances
-			(project "KiCad_Lawn_Mower"
+			(project "KiCad_Vacuum_Robot"
 				(path "/0806a8c0-bc45-48da-a5f3-b40d8c386964"
 					(page "3")
 				)

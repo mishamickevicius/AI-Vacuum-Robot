@@ -13,6 +13,7 @@
 #include "ir_sensor.h"
 #include "motor_control.h"
 #include "rpi_connector.h"
+#include "robot_orchestrator.h"
 
 // My Macros
 #define IR_SENSOR_1_PIN GPIO_NUM_1
@@ -54,8 +55,14 @@ static void rpi_uart_task(void *pvParameters)
 
 void app_main(void)
 {   
-    ESP_LOGI(TAG, "Main program starting");
+    ESP_LOGI(TAG, "Autonomous AI Vacuum Robot main program starting");
     esp_err_t ret; // Return var
+
+    // Initialize motor control subsystem
+    ret = motor_control_init();
+    if (ret != ESP_OK) {
+        ESP_LOGE(TAG, "Failed to initialize motor control: %s", esp_err_to_name(ret));
+    }
 
     // Init IR Sensor 1
     ir_sensor_data_t irSensor1Data;
@@ -82,4 +89,10 @@ void app_main(void)
         5,                  // Priority
         NULL                // Task handle
     );
+
+    // Start robot orchestrator task
+    ret = robot_orchestrator_start();
+    if (ret != ESP_OK) {
+        ESP_LOGE(TAG, "Failed to start robot orchestrator: %s", esp_err_to_name(ret));
+    }
 }

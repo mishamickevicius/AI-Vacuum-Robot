@@ -1171,7 +1171,7 @@
 			(uuid "da685e63-ca2c-4dd7-99d8-462ec9edb904")
 		)
 		(instances
-			(project "KiCad_Lawn_Mower"
+			(project "KiCad_Vacuum_Robot"
 				(path "/0806a8c0-bc45-48da-a5f3-b40d8c386964/59b9aee8-2e22-46e8-92f2-019218b8f401"
 					(reference "#PWR07")
 					(unit 1)
@@ -1249,7 +1249,7 @@
 			(uuid "c0c6715e-f089-4e14-a122-1b9150510836")
 		)
 		(instances
-			(project "KiCad_Lawn_Mower"
+			(project "KiCad_Vacuum_Robot"
 				(path "/0806a8c0-bc45-48da-a5f3-b40d8c386964/59b9aee8-2e22-46e8-92f2-019218b8f401"
 					(reference "#PWR02")
 					(unit 1)
@@ -1332,7 +1332,7 @@
 			(uuid "d67523ba-a116-4af3-8d35-1db31d938258")
 		)
 		(instances
-			(project "KiCad_Lawn_Mower"
+			(project "KiCad_Vacuum_Robot"
 				(path "/0806a8c0-bc45-48da-a5f3-b40d8c386964/59b9aee8-2e22-46e8-92f2-019218b8f401"
 					(reference "U5")
 					(unit 1)
@@ -1410,7 +1410,7 @@
 			(uuid "2752d8e4-f8a6-45a8-9a77-9220a81556b4")
 		)
 		(instances
-			(project "KiCad_Lawn_Mower"
+			(project "KiCad_Vacuum_Robot"
 				(path "/0806a8c0-bc45-48da-a5f3-b40d8c386964/59b9aee8-2e22-46e8-92f2-019218b8f401"
 					(reference "#PWR010")
 					(unit 1)
@@ -1491,7 +1491,7 @@
 			(uuid "12bb6833-ef8a-4e7a-a697-6f6ca5bbcf44")
 		)
 		(instances
-			(project "KiCad_Lawn_Mower"
+			(project "KiCad_Vacuum_Robot"
 				(path "/0806a8c0-bc45-48da-a5f3-b40d8c386964/59b9aee8-2e22-46e8-92f2-019218b8f401"
 					(reference "C3")
 					(unit 1)
@@ -1574,7 +1574,7 @@
 			(uuid "ea2a4572-fa41-4fef-ab50-34ca38629b35")
 		)
 		(instances
-			(project "KiCad_Lawn_Mower"
+			(project "KiCad_Vacuum_Robot"
 				(path "/0806a8c0-bc45-48da-a5f3-b40d8c386964/59b9aee8-2e22-46e8-92f2-019218b8f401"
 					(reference "U3")
 					(unit 1)
@@ -1652,7 +1652,7 @@
 			(uuid "b79d0702-8d5c-4446-a783-3db698a12bea")
 		)
 		(instances
-			(project "KiCad_Lawn_Mower"
+			(project "KiCad_Vacuum_Robot"
 				(path "/0806a8c0-bc45-48da-a5f3-b40d8c386964/59b9aee8-2e22-46e8-92f2-019218b8f401"
 					(reference "#PWR011")
 					(unit 1)
@@ -1735,7 +1735,7 @@
 			(uuid "22c3e545-be66-4204-9ef6-0dab602127e0")
 		)
 		(instances
-			(project "KiCad_Lawn_Mower"
+			(project "KiCad_Vacuum_Robot"
 				(path "/0806a8c0-bc45-48da-a5f3-b40d8c386964/59b9aee8-2e22-46e8-92f2-019218b8f401"
 					(reference "U1")
 					(unit 1)
@@ -1816,7 +1816,7 @@
 			(uuid "4333cfc6-7fd8-44aa-bafe-aa3bb4eeb8d7")
 		)
 		(instances
-			(project "KiCad_Lawn_Mower"
+			(project "KiCad_Vacuum_Robot"
 				(path "/0806a8c0-bc45-48da-a5f3-b40d8c386964/59b9aee8-2e22-46e8-92f2-019218b8f401"
 					(reference "C2")
 					(unit 1)
@@ -1899,7 +1899,7 @@
 			(uuid "10f1a8a4-d472-40a6-bb28-5fba6ad7c621")
 		)
 		(instances
-			(project "KiCad_Lawn_Mower"
+			(project "KiCad_Vacuum_Robot"
 				(path "/0806a8c0-bc45-48da-a5f3-b40d8c386964/59b9aee8-2e22-46e8-92f2-019218b8f401"
 					(reference "U4")
 					(unit 1)
@@ -1977,7 +1977,7 @@
 			(uuid "848cd4e0-6560-47f9-b903-5bc83715b914")
 		)
 		(instances
-			(project "KiCad_Lawn_Mower"
+			(project "KiCad_Vacuum_Robot"
 				(path "/0806a8c0-bc45-48da-a5f3-b40d8c386964/59b9aee8-2e22-46e8-92f2-019218b8f401"
 					(reference "#PWR01")
 					(unit 1)
@@ -2055,7 +2055,7 @@
 			(uuid "2f9bde07-c0e1-41fe-a5f8-062d93133900")
 		)
 		(instances
-			(project "KiCad_Lawn_Mower"
+			(project "KiCad_Vacuum_Robot"
 				(path "/0806a8c0-bc45-48da-a5f3-b40d8c386964/59b9aee8-2e22-46e8-92f2-019218b8f401"
 					(reference "#PWR06")
 					(unit 1)
@@ -2133,7 +2133,7 @@
 			(uuid "8e37496b-9517-4407-b7c2-18c0d9007ef9")
 		)
 		(instances
-			(project "KiCad_Lawn_Mower"
+			(project "KiCad_Vacuum_Robot"
 				(path "/0806a8c0-bc45-48da-a5f3-b40d8c386964/59b9aee8-2e22-46e8-92f2-019218b8f401"
 					(reference "#PWR08")
 					(unit 1)
@@ -2214,7 +2214,7 @@
 			(uuid "d99d707b-ac6c-424a-ada4-d502de9d49c3")
 		)
 		(instances
-			(project "KiCad_Lawn_Mower"
+			(project "KiCad_Vacuum_Robot"
 				(path "/0806a8c0-bc45-48da-a5f3-b40d8c386964/59b9aee8-2e22-46e8-92f2-019218b8f401"
 					(reference "C4")
 					(unit 1)
@@ -2292,7 +2292,7 @@
 			(uuid "be3c8fc0-a2a0-4c38-9847-715208ecd6bd")
 		)
 		(instances
-			(project "KiCad_Lawn_Mower"
+			(project "KiCad_Vacuum_Robot"
 				(path "/0806a8c0-bc45-48da-a5f3-b40d8c386964/59b9aee8-2e22-46e8-92f2-019218b8f401"
 					(reference "#PWR09")
 					(unit 1)
@@ -2373,7 +2373,7 @@
 			(uuid "72ea305c-bfc9-480c-959e-589f1aa84fab")
 		)
 		(instances
-			(project "KiCad_Lawn_Mower"
+			(project "KiCad_Vacuum_Robot"
 				(path "/0806a8c0-bc45-48da-a5f3-b40d8c386964/59b9aee8-2e22-46e8-92f2-019218b8f401"
 					(reference "C1")
 					(unit 1)

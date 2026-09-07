@@ -256,7 +256,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "KiCad_Lawn_Mower.kicad_pro",
+    "filename": "KiCad_Vacuum_Robot.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -424,7 +424,7 @@
     "subpart_id_separator": 0,
     "top_level_sheets": [
       {
-        "filename": "KiCad_Lawn_Mower.kicad_sch",
+        "filename": "KiCad_Vacuum_Robot.kicad_sch",
         "name": "High Level Hardware",
         "uuid": "0806a8c0-bc45-48da-a5f3-b40d8c386964"
       }
