@@ -21,6 +21,16 @@ print("Starting continuous detection loop. Press Ctrl+C to stop.\n")
 
 frame_idx = 0
 
+## Keep track of object counts
+results = model(frame, imgsz=320, verbose=False)
+result = results[0]
+names: dict = result.names
+counts = {}
+for key in names.values():
+    counts[key] = 0
+
+assert len(counts) == len(names)
+
 try:
     while True:
         t_start = time.perf_counter()
@@ -39,6 +49,7 @@ try:
             for box in boxes:
                 class_id = int(box.cls[0].item())
                 class_name = result.names[class_id]
+                counts[class_name] += 1
                 confidence = float(box.conf[0].item())
                 xyxy = [round(x, 1) for x in box.xyxy[0].tolist()]
 
