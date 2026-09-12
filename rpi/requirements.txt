@@ -1,2 +1,9 @@
-opencv-python
-ultralytics
+# Computer Vision & Deep Learning
+ultralytics>=8.0.0
+torch>=2.0.0
+torchvision>=0.15.0
+numpy>=1.23.0
+opencv-python-headless>=4.8.0
+
+# Hardware & Serial Communication
+pyserial>=3.5
