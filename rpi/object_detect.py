@@ -86,6 +86,6 @@ print(f"Objects detected: {len(results[0].boxes)}")
 # ==========================================
 # OVERHEAD COMPARISON
 # ==========================================
-print("\n--- Summary ---")
-overhead_ms = (ul_latency - pt_latency) * 1000
-print(f"Ultralytics Wrapper Overhead (Letterbox + NMS): {overhead_ms:.2f} ms")
+# print("\n--- Summary ---")
+# overhead_ms = (ul_latency - pt_latency) * 1000
+# print(f"Ultralytics Wrapper Overhead (Letterbox + NMS): {overhead_ms:.2f} ms")
