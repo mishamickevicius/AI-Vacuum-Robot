@@ -9,6 +9,7 @@ import cv2
 import numpy as np
 import torch
 from ultralytics import YOLO
+from ultralytics.engine.results import Results, Boxes
 from picamera2 import Picamera2
 
 # ==========================================
@@ -48,8 +49,10 @@ model_ul = YOLO(model_name)
 _ = model_ul(frame_rgb, verbose=False)
 
 start_time = time.time()
-results = model_ul(frame_rgb, verbose=False)
-print(results)
+results: Results = model_ul(frame_rgb, verbose=False)
+boxes: Boxes = results.boxes
+print(boxes)
+print(results.names)
 ul_latency = time.time() - start_time
 
 print(f"Total Latency (Pre + Forward + NMS): {ul_latency:.4f} seconds ({1/ul_latency:.2f} FPS)")

@@ -43,3 +43,4 @@ esp-idf/
 __pycache__/
 .env
 
+.venv/
