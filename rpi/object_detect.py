@@ -50,7 +50,7 @@ _ = model_ul(frame_rgb, verbose=False)
 
 start_time = time.time()
 results: Results = model_ul(frame_rgb, verbose=False)
-boxes: Boxes = results.boxes
+boxes: Boxes = results.boxes if results.boxes else None
 print(boxes)
 print(results.names)
 ul_latency = time.time() - start_time
