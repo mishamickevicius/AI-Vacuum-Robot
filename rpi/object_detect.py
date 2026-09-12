@@ -49,14 +49,17 @@ model_ul = YOLO(model_name)
 _ = model_ul(frame_rgb, verbose=False)
 
 start_time = time.time()
-results: Results = model_ul(frame_rgb, verbose=False)
+results = model_ul(frame_rgb, verbose=False)
+print(f"Length of results: {len(results)}")
+result: Results = results[0]
 try: 
-    boxes: Boxes = results.boxes 
+    boxes: Boxes = result.boxes 
     print(boxes)
+    print(result.names)
 except AttributeError:
     print("Can't find boxes")
-print(results.names)
-print(results)
+
+print(result)
 ul_latency = time.time() - start_time
 
 print(f"Total Latency (Pre + Forward + NMS): {ul_latency:.4f} seconds ({1/ul_latency:.2f} FPS)")
