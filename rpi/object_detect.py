@@ -37,4 +37,22 @@ print(f"Latency: {latency:.4f}s ({1/latency:.2f} FPS)")
 print(f"Speed breakdown (ms): {result.speed}")
 print(f"Detections: {len(result.boxes)}")
 
+# Extract detected objects and their class names
+detections = []
+for box in result.boxes:
+    class_id = int(box.cls[0].item())
+    class_name = result.names[class_id]
+    confidence = float(box.conf[0].item())
+    xyxy = box.xyxy[0].tolist()  # [x_min, y_min, x_max, y_max]
+
+    detections.append({
+        "name": class_name,
+        "confidence": round(confidence, 2),
+        "box": [round(coord, 1) for coord in xyxy]
+    })
+
+    print(f"Detected: {class_name:<15} | Conf: {confidence:.2%} | Box: {xyxy}")
+
+print(f"\nTotal detections: {len(detections)}")
+
 picam2.stop()
