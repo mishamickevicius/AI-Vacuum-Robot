@@ -70,4 +70,6 @@ finally:
     picam2.close()
     print("Camera released successfully.")
     print()
-    print(counts)
+    for key, value in counts.items():
+        if value > 0:
+            print(f"{key} detected {value} times")
