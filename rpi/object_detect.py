@@ -55,7 +55,17 @@ result: Results = results[0]
 try: 
     boxes: Boxes = result.boxes 
     print(boxes)
-    print(result.names)
+    print()
+    
+    names = result.names
+    detected_class = int(boxes.cls[0])
+    try:
+        print(f"Class: {detected_class} ---> {names[detected_class]}")
+    except KeyError:
+        print("Could not get class name")
+        print(detected_class)
+
+
 except AttributeError:
     print("Can't find boxes")
 
