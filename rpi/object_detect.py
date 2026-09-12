@@ -22,6 +22,7 @@ print("Starting continuous detection loop. Press Ctrl+C to stop.\n")
 frame_idx = 0
 
 ## Keep track of object counts
+frame = picam2.capture_array()
 results = model(frame, imgsz=320, verbose=False)
 result = results[0]
 names: dict = result.names
@@ -68,3 +69,5 @@ finally:
     picam2.stop()
     picam2.close()
     print("Camera released successfully.")
+    print()
+    print(counts)
