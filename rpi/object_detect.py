@@ -49,6 +49,7 @@ _ = model_ul(frame_rgb, verbose=False)
 
 start_time = time.time()
 results = model_ul(frame_rgb, verbose=False)
+print(results)
 ul_latency = time.time() - start_time
 
 print(f"Total Latency (Pre + Forward + NMS): {ul_latency:.4f} seconds ({1/ul_latency:.2f} FPS)")
@@ -57,30 +58,30 @@ print(f"Objects detected: {len(results[0].boxes)}")
 # ==========================================
 # METHOD 2: RAW PYTORCH INFERENCE
 # ==========================================
-print("\n--- Method 2: Raw PyTorch Forward Pass ---")
-# Extract underlying nn.Module (weights_only=False required for Ultralytics models)
-ckpt = torch.load(model_name, map_location="cpu", weights_only=False)
-model_pt = (ckpt["model"] if "model" in ckpt else ckpt).float().eval()
+# print("\n--- Method 2: Raw PyTorch Forward Pass ---")
+# # Extract underlying nn.Module (weights_only=False required for Ultralytics models)
+# ckpt = torch.load(model_name, map_location="cpu", weights_only=False)
+# model_pt = (ckpt["model"] if "model" in ckpt else ckpt).float().eval()
 
-# Manual Preprocessing (HWC uint8 [0..255] -> NCHW float32 [0.0..1.0])
-img_chw = np.transpose(frame_rgb, (2, 0, 1))
-img_tensor = torch.from_numpy(img_chw).float() / 255.0
-img_tensor = img_tensor.unsqueeze(0)  # Shape: [1, 3, 640, 640]
+# # Manual Preprocessing (HWC uint8 [0..255] -> NCHW float32 [0.0..1.0])
+# img_chw = np.transpose(frame_rgb, (2, 0, 1))
+# img_tensor = torch.from_numpy(img_chw).float() / 255.0
+# img_tensor = img_tensor.unsqueeze(0)  # Shape: [1, 3, 640, 640]
 
-# Warmup run
-with torch.no_grad():
-    _ = model_pt(img_tensor)
+# # Warmup run
+# with torch.no_grad():
+#     _ = model_pt(img_tensor)
 
-start_time = time.time()
-with torch.no_grad():
-    raw_preds = model_pt(img_tensor)
-pt_latency = time.time() - start_time
+# start_time = time.time()
+# with torch.no_grad():
+#     raw_preds = model_pt(img_tensor)
+# pt_latency = time.time() - start_time
 
-# If model_pt returns a tuple/list (e.g. (preds, feats)), take index 0
-out_tensor = raw_preds[0] if isinstance(raw_preds, (tuple, list)) else raw_preds
+# # If model_pt returns a tuple/list (e.g. (preds, feats)), take index 0
+# out_tensor = raw_preds[0] if isinstance(raw_preds, (tuple, list)) else raw_preds
 
-print(f"Pure Forward-Pass Time: {pt_latency:.4f} seconds ({1/pt_latency:.2f} FPS)")
-print(f"Raw Output Tensor Shape: {out_tensor.shape}")
+# print(f"Pure Forward-Pass Time: {pt_latency:.4f} seconds ({1/pt_latency:.2f} FPS)")
+# print(f"Raw Output Tensor Shape: {out_tensor.shape}")
 
 # ==========================================
 # OVERHEAD COMPARISON
